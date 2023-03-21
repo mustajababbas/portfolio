@@ -158,6 +158,7 @@ closeTrigger.on('click', function(){
 
 }
 
+// CUSTOM CURSOR
 
 document.addEventListener("DOMContentLoaded", function(event) {
   var cursor = document.querySelector(".custom-cursor");
@@ -221,8 +222,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
 });
 
+// CUSTOM CURSOR
 
-
+// DARK MODE
 
 let darkMode = localStorage.getItem('darkMode'); 
 
@@ -260,6 +262,8 @@ darkModeToggle.addEventListener('click', () => {
     disableDarkMode(); 
   }
 });
+
+// DARK MODE
 
 
 
@@ -344,7 +348,6 @@ const handleMouseUp = () => {
 }
 
 
-// document.addEventListener('mousewheel', handleWheel)
 document.addEventListener('mousedown', handleMouseDown)
 document.addEventListener('mousemove', handleMouseMove)
 document.addEventListener('mouseup', handleMouseUp)
@@ -353,10 +356,10 @@ document.addEventListener('touchmove', handleMouseMove)
 document.addEventListener('touchend', handleMouseUp)
 
 
-},1000)
+},100)
 
 
-
+// SOCIAL TEXT ANIMATION
 
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -504,3 +507,40 @@ function fixStepIndicator(n) {
   
   x[n].className += " active";
 }
+
+
+
+const animateLeft = document.querySelectorAll(".animate-from-left");
+const animateRight = document.querySelectorAll(".animate-from-right");
+const animateBottom = document.querySelectorAll(".animate-from-bottom");
+const animateTop = document.querySelectorAll(".animate-from-top");
+
+
+
+const observer = new IntersectionObserver(
+    // CALBACK
+    animateList => {
+        animateList.forEach(left => {
+            left.target.classList.toggle("show", left.isIntersecting)
+            if (left.isIntersecting) observer.unobserve(left.target)
+        })
+    },{
+      threshold:0.3,
+    }
+);
+
+animateLeft.forEach(list =>{
+    observer.observe(list)
+});
+
+animateRight.forEach(list =>{
+  observer.observe(list)
+});
+
+animateBottom.forEach(list =>{
+  observer.observe(list)
+});
+
+animateTop.forEach(list =>{
+  observer.observe(list)
+});
