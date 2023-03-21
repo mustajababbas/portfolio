@@ -403,7 +403,7 @@ document.addEventListener('touchmove', handleMouseMove)
 document.addEventListener('touchend', handleMouseUp)
 
 
-},100)
+},300)
 
 
 // SOCIAL TEXT ANIMATION
