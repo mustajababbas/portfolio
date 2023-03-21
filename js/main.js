@@ -41,6 +41,9 @@ var openTrigger = $('.menu-trigger');
 var openTriggerTop = openTrigger.find('.menu-trigger-bar.top');
 var openTriggerMiddle = openTrigger.find('.menu-trigger-bar.middle');
 var openTriggerBottom = openTrigger.find('.menu-trigger-bar.bottom');
+var menuli = $("header nav .menu li");
+
+
 
 //CLOSE TRIGGER
 var closeTrigger = $('.close-trigger');
@@ -183,6 +186,15 @@ openTrigger.on('click', function(){
 });
        
 closeTrigger.on('click', function(){
+  $(body).css("overflow","auto");
+  if(tlClose.progress() < 1){
+    tlClose.play();
+} else {
+    tlClose.restart();
+}
+});
+
+menuli.on('click', function(){
   $(body).css("overflow","auto");
   if(tlClose.progress() < 1){
     tlClose.play();
