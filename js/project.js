@@ -75,7 +75,7 @@ for (var i = 0; i < projects.length; i++) {
             '<a href="' + projects[i].Link + '" class="title">' + projects[i].Name + ' </a>' +
             '<h3 class="sub-title">'+ projects[i].Tech +'</h3>' +
             '<div class="num">'+ projectCount ++ +'</div>' +
-            '<img src="' + projects[i].Image + '"/>' +
+            '<img src="' + projects[i].Image + '" loading="lazy"/>' +
         '</div>' +
     '</div>'
 
