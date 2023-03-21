@@ -1,5 +1,35 @@
 var body = $("body");
 
+var words = ["LOADING", "FRONTEND", "JAVASCRIPT", "HTML", "REACT", "CSS", "JQUERY", "BOOTSTRAP", "BABEL", "GSAP", "PORTFOLIO", "WASI", "SHOPIFY"];
+
+window.addEventListener("load", function() {
+
+
+  const preload = document.querySelector('.preloader');
+  preload.classList.add('loaded');
+
+		var randoms = window.document.getElementsByClassName("randoms");
+		for (i = 0; i < randoms.length; i++)
+				changeWord(randoms[i]);
+}, false);
+
+function changeWord(a) {
+		a.style.opacity = '0.1';
+		a.innerHTML = words[getRandomInt(0, words.length - 1)];
+		setTimeout(function() {
+				a.style.opacity = '1';
+		}, 425);
+		setTimeout(function() {
+				changeWord(a);
+		}, getRandomInt(500, 800));
+}
+
+
+function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
 if (window.matchMedia("(max-width:991px)").matches) {
 //OPEN TRIGGER
 var openTrigger = $('.menu-trigger');
@@ -524,8 +554,6 @@ const observer = new IntersectionObserver(
             left.target.classList.toggle("show", left.isIntersecting)
             if (left.isIntersecting) observer.unobserve(left.target)
         })
-    },{
-      threshold:0.3,
     }
 );
 
