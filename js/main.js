@@ -8,10 +8,12 @@ window.addEventListener("load", function() {
   const preload = document.querySelector('.preloader');
   preload.classList.add('loaded');
 
-		var randoms = window.document.getElementsByClassName("randoms");
-		for (i = 0; i < randoms.length; i++)
-				changeWord(randoms[i]);
-}, false);
+	
+});
+
+var randoms = window.document.getElementsByClassName("randoms");
+for (i = 0; i < randoms.length; i++)
+    changeWord(randoms[i]);
 
 function changeWord(a) {
 		a.style.opacity = '0.1';
