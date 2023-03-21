@@ -214,6 +214,25 @@ header nav .dark-mode-toggle{
 
 @media (max-width:767px){
 
+
+    .loading {
+        top: calc(50% + 100px);
+    }
+    
+    .loading div {
+        width: 5%;
+        height: 15%;
+    }
+
+
+    .preloader h2 {
+        font-size: 8vw;
+      }
+      
+      .preloader h4 {
+        font-size: 5vw;
+      }
+
     .custom-container {
         margin: 10px auto;
         padding: 0 10px;

@@ -1,10 +1,10 @@
-var body = $("body");
+
 
 var words = ["LOADING", "FRONTEND", "JAVASCRIPT", "HTML", "REACT", "CSS", "JQUERY", "BOOTSTRAP", "BABEL", "GSAP", "PORTFOLIO", "WASI", "SHOPIFY"];
 
 window.addEventListener("load", function() {
 
-
+  document.getElementsByTagName('body')[0].style.overflow = "auto"
   const preload = document.querySelector('.preloader');
   preload.classList.add('loaded');
 
@@ -23,7 +23,7 @@ function changeWord(a) {
 		}, 425);
 		setTimeout(function() {
 				changeWord(a);
-		}, getRandomInt(500, 800));
+		}, getRandomInt(1000, 1500));
 }
 
 
@@ -33,6 +33,9 @@ function getRandomInt(min, max) {
 
 
 if (window.matchMedia("(max-width:991px)").matches) {
+
+  var body = $("body");
+
 //OPEN TRIGGER
 var openTrigger = $('.menu-trigger');
 var openTriggerTop = openTrigger.find('.menu-trigger-bar.top');
