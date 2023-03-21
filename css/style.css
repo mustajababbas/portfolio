@@ -779,12 +779,9 @@ header nav .dark-mode-toggle {
   object-fit: cover;
   object-position: top;
   pointer-events: none;
-  transition: object-position 5s ease-in-out;
 }
 
-.work-item .carousel-box:hover img {
-  object-position: bottom;
-}
+
 
 .foto-gradients {
   position: relative;
