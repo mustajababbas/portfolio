@@ -584,45 +584,11 @@ header nav .dark-mode-toggle {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   display: flex;
-  height: 150px;
+  height: 200px;
   flex-direction: column;
   position: relative;
 }
 
-.card-wrapper:hover::before {
-  opacity: 1;
-}
-
-.card-wrapper::before,
-.card-wrapper::after {
-  border-radius: inherit;
-  content: "";
-  height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: opacity 500ms;
-  width: 100%;
-}
-
-.card-wrapper::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06),
-    transparent 40%
-  );
-  z-index: 3;
-}
-
-.card-wrapper::after {
-  background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.4),
-    transparent 40%
-  );
-  z-index: 1;
-}
 
 .card-wrapper > .card-content {
   background-color: var(--card-color);
@@ -643,11 +609,47 @@ header nav .dark-mode-toggle {
 .card-image {
   align-items: center;
   display: flex;
-  height: 50px;
+  height: 150px;
   width: 50px;
   justify-content: center;
-  overflow: hidden;
+  position: relative;
 }
+
+.card-image::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 66px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -33px;
+  background: #00000017;  
+  z-index: -1;
+  border-radius: 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: transform 0.35s,-webkit-transform 0.35s cubic-bezier(.12,.845,.305,1);
+}
+
+.darkmode .card-image::before {
+  background: #ffffff17;
+}
+
+.card-wrapper:hover .card-image:before {
+  -webkit-transform: scale(.75);
+  transform: scale(.75);
+}
+
+.card-wrapper .card-image img{
+  transition: transform 0.35s,-webkit-transform 0.35s cubic-bezier(.12,.845,.305,1);
+}
+
+.card-wrapper:hover img {
+  -webkit-transform: translateX(-25%) translateY(-10px) rotate(8deg);
+  transform: translateX(-25%) translateY(-10px) rotate(8deg);
+
+}
+
 
 .card-info-wrapper {
   align-items: center;
