@@ -1,6 +1,6 @@
 
 
-var words = ["LOADING", "FRONTEND", "JAVASCRIPT", "HTML", "REACT", "CSS", "JQUERY", "BOOTSTRAP", "BABEL", "GSAP", "PORTFOLIO", "WASI", "SHOPIFY"];
+var words = ["LOADING", "FRONTEND", "JAVASCRIPT", "HTML", "REACT", "CSS", "JQUERY", "BOOTSTRAP", "BABEL", "GSAP", "PORTFOLIO", "MUSTAJAB", "SHOPIFY"];
 
 window.addEventListener("load", function() {
 
