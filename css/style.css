@@ -68,6 +68,10 @@ body {
   overflow: hidden;
 }
 
+a:hover{
+  color: var(--foreground) !important;
+}
+
 img {
   max-width: 100%;
 }
@@ -959,6 +963,9 @@ header nav .dark-mode-toggle {
 
 #socialLink .line {
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap:20px
 }
 
 .word {
@@ -967,9 +974,7 @@ header nav .dark-mode-toggle {
   font-weight: 400;
   font-size: 30px;
   line-height: 44px;
-  margin-bottom: 20px;
   transition: opacity 250ms ease;
-  margin-left: 20px;
 }
 
 #socialLink:has(.line:hover) .word:not(.fancy:hover) {
