@@ -71,7 +71,7 @@ export default function ProjectSection() {
                         className="d-flex flex-row text-nowrap"
                     >
                         <h2 className='heading-style-h1'>Pr<span className="skew-text">o</span>jects&nbsp;</h2>
-                        <h2 className='heading-style-h1'>- Pr<span className="skew-text">o</span>jects &nbsp;</h2>
+                        <h2 className='heading-style-h1'>- Selected Pr<span className="skew-text">o</span>jects &nbsp;</h2>
                         <h2 className='heading-style-h1'>- Pr<span className="skew-text">o</span>jects</h2>
                     </motion.div>
                 </div>
