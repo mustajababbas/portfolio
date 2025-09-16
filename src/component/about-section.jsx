@@ -6,8 +6,8 @@ export default function AboutSection() {
         <>
             <section id="about" className="section_home-about">
                 <div className="spacer-xxhuge"></div>
-                    <div className="px-5">
-                            <div className="row">
+                    <div className="px-4 px-md-5">
+                            <div className="row gy-4">
                                 <div className='col-lg-4 about-text'>
                                     <SplitText text="About" headingSize='h2'/>
                                 </div>

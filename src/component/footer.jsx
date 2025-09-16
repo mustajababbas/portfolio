@@ -5,7 +5,7 @@ export default function Footer() {
 
     return (
         <footer className="footer">
-            <div className="px-5">
+            <div className="px-4 px-md-5">
                 <div className="footer_component">
                     <div className="footer_content-wrapper">
                         <div className="footer_content">

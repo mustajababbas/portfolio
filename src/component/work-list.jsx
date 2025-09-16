@@ -41,7 +41,7 @@ export default function WorkList() {
   return (
     <>
 
-        <div className='px-5'>
+        <div className='px-4 px-md-5'>
             <div className='home-work_list'>
             {Projects.map((work, index) => (
                 <motion.div

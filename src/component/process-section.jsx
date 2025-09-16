@@ -59,7 +59,7 @@ export default function ProcessSection() {
             <section id="process" className="section_home-process">
                 <div className="spacer-xxhuge"></div>
 
-                <div className="px-5">
+                <div className="px-4 px-md-5">
                     <div className="process_grid-title">
                         <SplitText text="Process" headingSize='h2'/>
                         <div className="process_text-wrapper">

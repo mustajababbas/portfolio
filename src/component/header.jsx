@@ -4,9 +4,6 @@ export default function Header() {
   return (
    <>
     <nav className="nav">
-        <div className='text-center pt-4 d-lg-none'>
-            <p className='mb-0'>Mobile responsiveness in progress</p>
-        </div>
         <div className="nav-container">
             <div className="nav-info">
                 <div>

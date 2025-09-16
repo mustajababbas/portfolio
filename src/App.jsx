@@ -1,4 +1,5 @@
 import './App.css'
+import './responsive.css'
 import AboutSection from './component/about-section'
 import Footer from './component/footer'
 import Header from './component/header'

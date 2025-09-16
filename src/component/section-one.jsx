@@ -4,7 +4,7 @@ export default function SectionOne() {
   return (
    <>
     <div id="top" className="section_home-header">
-        <div className="px-5">
+        <div className="px-4 px-md-5">
             <div className="home-header_component">
                 <div className="home-header_content-wrapper">
                     <div className="home-header_content">
