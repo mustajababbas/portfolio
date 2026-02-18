@@ -59,12 +59,10 @@ export default function WorkList() {
                     <div className={`home-work_item${index % 2 !== 0 ? '-two' : ''}`}>
                         <div className='home-work_video-wrapper'>
                             <div className="video-embed_desktop w-embed">
-                            <video playsinline="" autoPlay muted loop width="100%" height="100%" title="Ananas Media Website">
+                            <video playsinline="" autoPlay muted loop width="100%" height="100%" title={work.name}>
                                 <source src={work.video} type="video/mp4"/>
                             </video>
                             </div>
-                            <CustomCursor />
-                            <a href="#" className="work_button-wrapper cursor-link"></a>
                         </div>
                         <div className={`home-work_info-block ${index % 2 !== 0 ? 'align-right' : ''}`}>
                             <div className='home-work_info-wrapper'>
